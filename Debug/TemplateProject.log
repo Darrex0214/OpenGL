@@ -1,0 +1,13 @@
+﻿cl : línea de comandos  warning D9035: La opción 'Gm' está desusada y se quitará en próximas versiones
+  main.cpp
+D:\Universidad Javeriana\5 - Semestre\COMPUTACION GRAFICA\OpenGL\main.cpp(47,10): warning C4101: 'h': variable local sin referencia
+D:\Universidad Javeriana\5 - Semestre\COMPUTACION GRAFICA\OpenGL\main.cpp(47,7): warning C4101: 'w': variable local sin referencia
+D:\Universidad Javeriana\5 - Semestre\COMPUTACION GRAFICA\OpenGL\main.cpp(84,10): warning C4101: 'h': variable local sin referencia
+D:\Universidad Javeriana\5 - Semestre\COMPUTACION GRAFICA\OpenGL\main.cpp(84,7): warning C4101: 'w': variable local sin referencia
+D:\Universidad Javeriana\5 - Semestre\COMPUTACION GRAFICA\OpenGL\main.cpp(112,10): warning C4101: 'h': variable local sin referencia
+D:\Universidad Javeriana\5 - Semestre\COMPUTACION GRAFICA\OpenGL\main.cpp(112,7): warning C4101: 'w': variable local sin referencia
+D:\Universidad Javeriana\5 - Semestre\COMPUTACION GRAFICA\OpenGL\main.cpp(188,17): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+D:\Universidad Javeriana\5 - Semestre\COMPUTACION GRAFICA\OpenGL\main.cpp(209,25): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+D:\Universidad Javeriana\5 - Semestre\COMPUTACION GRAFICA\OpenGL\main.cpp(454,16): warning C4305: 'inicializando': truncamiento de 'double' a 'GLfloat'
+D:\Universidad Javeriana\5 - Semestre\COMPUTACION GRAFICA\OpenGL\main.cpp(455,16): warning C4305: 'inicializando': truncamiento de 'double' a 'GLfloat'
+  TemplateProject.vcxproj -> D:\Universidad Javeriana\5 - Semestre\COMPUTACION GRAFICA\OpenGL\Debug\TemplateProject.exe
