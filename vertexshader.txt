@@ -1,14 +1,16 @@
+attribute vec4 vertex; // Cambiado de gl_Vertex a attribute vec4 vertex
+attribute vec3 normal; // Cambiado de gl_Normal a attribute vec3 normal
+attribute vec2 texCoord; // Agregada atribución de coordenadas de textura
+
 varying vec3 N;
 varying vec3 v;
 varying vec2 vTexCoord;
-void main(void)
+
+void main()
 {
-
-	vTexCoord =gl_MultiTexCoord0;
-   v = vec3(gl_ModelViewMatrix * gl_Vertex);       
-   N = normalize(gl_NormalMatrix * gl_Normal);
-
-   gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
-
-
+    vTexCoord = texCoord; // Usamos la coordenada de textura recibida
+    v = vec3(gl_ModelViewMatrix * vertex);
+    N = normalize(gl_NormalMatrix * normal);
+    gl_Position = gl_ModelViewProjectionMatrix * vertex;
 }
+

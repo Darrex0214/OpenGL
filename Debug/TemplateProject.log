@@ -2,8 +2,6 @@
   main.cpp
 D:\Universidad Javeriana\5 - Semestre\COMPUTACION GRAFICA\Prueba OpenGL GitHub\OpenGL\main.cpp(47,10): warning C4101: 'h': variable local sin referencia
 D:\Universidad Javeriana\5 - Semestre\COMPUTACION GRAFICA\Prueba OpenGL GitHub\OpenGL\main.cpp(47,7): warning C4101: 'w': variable local sin referencia
-D:\Universidad Javeriana\5 - Semestre\COMPUTACION GRAFICA\Prueba OpenGL GitHub\OpenGL\main.cpp(127,17): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-D:\Universidad Javeriana\5 - Semestre\COMPUTACION GRAFICA\Prueba OpenGL GitHub\OpenGL\main.cpp(148,25): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-D:\Universidad Javeriana\5 - Semestre\COMPUTACION GRAFICA\Prueba OpenGL GitHub\OpenGL\main.cpp(391,16): warning C4305: 'inicializando': truncamiento de 'double' a 'GLfloat'
-D:\Universidad Javeriana\5 - Semestre\COMPUTACION GRAFICA\Prueba OpenGL GitHub\OpenGL\main.cpp(392,16): warning C4305: 'inicializando': truncamiento de 'double' a 'GLfloat'
+D:\Universidad Javeriana\5 - Semestre\COMPUTACION GRAFICA\Prueba OpenGL GitHub\OpenGL\main.cpp(112,17): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+D:\Universidad Javeriana\5 - Semestre\COMPUTACION GRAFICA\Prueba OpenGL GitHub\OpenGL\main.cpp(133,25): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
   TemplateProject.vcxproj -> D:\Universidad Javeriana\5 - Semestre\COMPUTACION GRAFICA\Prueba OpenGL GitHub\OpenGL\Debug\TemplateProject.exe
