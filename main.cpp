@@ -42,60 +42,20 @@ public:
 	myWindow(){}
 
 	//*** Para Textura: aqui adiciono un método que abre la textura en JPG
-	void initialize_textures(void)
+	void loadTexture(const char* filePath, GLuint& texid, GLint magFilter, GLint minFilter)
 	{
 		int w, h;
 		GLubyte* data = 0;
-		//data = glmReadPPM("soccer_ball_diffuse.ppm", &w, &h);
-		//std::cout << "Read soccer_ball_diffuse.ppm, width = " << w << ", height = " << h << std::endl;
-
-		//dib1 = loadImage("soccer_ball_diffuse.jpg"); //FreeImage
 
 		glGenTextures(1, &texid);
 		glBindTexture(GL_TEXTURE_2D, texid);
 		glTexEnvi(GL_TEXTURE_2D, GL_TEXTURE_ENV_MODE, GL_MODULATE);
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, magFilter);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, minFilter);
 
-		// Loading JPG file
-		
-
-		FIBITMAP* bitmap = FreeImage_Load(
-			FreeImage_GetFileType("./Mallas/Mushrooms1.jpg", 0),
-			"./Mallas/Mushrooms1.jpg");  //*** Para Textura: esta es la ruta en donde se encuentra la textura
-
-
-		FIBITMAP* pImage = FreeImage_ConvertTo32Bits(bitmap);
-		int nWidth = FreeImage_GetWidth(pImage);
-		int nHeight = FreeImage_GetHeight(pImage);
-
-
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, nWidth, nHeight,
-			0, GL_BGRA, GL_UNSIGNED_BYTE, (void*)FreeImage_GetBits(pImage));
-
-		FreeImage_Unload(pImage);
-
-
-		glEnable(GL_TEXTURE_2D);
-	}
-
-	void loadMountainTexture(void)
-	{
-		int w, h;
-		GLubyte* data = 0;
-
-		glGenTextures(1, &texid2); // Usa un nuevo identificador de textura
-		glBindTexture(GL_TEXTURE_2D, texid2);
-		glTexEnvi(GL_TEXTURE_2D, GL_TEXTURE_ENV_MODE, GL_MODULATE);
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-
-		// Carga la nueva textura
-		FIBITMAP* mountainTexture = FreeImage_Load(
-			FreeImage_GetFileType("./Mallas/montana.jpg", 0),
-			"./Mallas/montana.jpg");
-
-		FIBITMAP* pImage = FreeImage_ConvertTo32Bits(mountainTexture);
+		// Load the texture
+		FIBITMAP* textureImage = FreeImage_Load(FreeImage_GetFileType(filePath, 0), filePath);
+		FIBITMAP* pImage = FreeImage_ConvertTo32Bits(textureImage);
 		int nWidth = FreeImage_GetWidth(pImage);
 		int nHeight = FreeImage_GetHeight(pImage);
 
@@ -107,32 +67,11 @@ public:
 		glEnable(GL_TEXTURE_2D);
 	}
 
-	void loadOceanTexture(void)
+	void initialize_textures()
 	{
-		int w, h;
-		GLubyte* data = 0;
-
-		glGenTextures(1, &texid3); // Usa un nuevo identificador de textura
-		glBindTexture(GL_TEXTURE_2D, texid3);
-		glTexEnvi(GL_TEXTURE_2D, GL_TEXTURE_ENV_MODE, GL_MODULATE);
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-
-		// Carga la nueva textura
-		FIBITMAP* mountainTexture = FreeImage_Load(
-			FreeImage_GetFileType("./Mallas/Ocean.png", 0),
-			"./Mallas/Ocean.png");
-
-		FIBITMAP* pImage = FreeImage_ConvertTo32Bits(mountainTexture);
-		int nWidth = FreeImage_GetWidth(pImage);
-		int nHeight = FreeImage_GetHeight(pImage);
-
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, nWidth, nHeight,
-			0, GL_BGRA, GL_UNSIGNED_BYTE, (void*)FreeImage_GetBits(pImage));
-
-		FreeImage_Unload(pImage);
-
-		glEnable(GL_TEXTURE_2D);
+		loadTexture("./Mallas/Mushrooms1.jpg", texid, GL_NEAREST, GL_NEAREST);
+		loadTexture("./Mallas/montana.jpg", texid2, GL_LINEAR, GL_LINEAR);
+		loadTexture("./Mallas/Ocean.png", texid3, GL_LINEAR, GL_LINEAR);
 	}
 
 
@@ -358,8 +297,6 @@ public:
  
 	  //*** Para Textura: abrir archivo de textura
 	  initialize_textures();
-	  loadMountainTexture();
-	  loadOceanTexture();
       DemoLight();
 
 	}

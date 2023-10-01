@@ -1,3 +1,4 @@
 C:\Users\Labor\OneDrive\Escritorio\ComputacionGrafica-master\Debug\TemplateProject.exe
 D:\ComputacionGrafica-master\Debug\TemplateProject.exe
 D:\Universidad Javeriana\5 - Semestre\COMPUTACION GRAFICA\OpenGL\Debug\TemplateProject.exe
+D:\Universidad Javeriana\5 - Semestre\COMPUTACION GRAFICA\Prueba OpenGL GitHub\OpenGL\Debug\TemplateProject.exe
